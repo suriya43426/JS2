@@ -10,14 +10,16 @@
 <body>
   <div id="vue-app">
     <span>ชื่อพนักงาน</span>
-    <input v-model="">
+    <input v-model="newData.empName">
     <span>เงินเดือน</span>
-    <input v-model="">
+    <input v-model="newData.salary">
     <br><br>
     <button @click="addEmp">บันทึกข้อมูล</button>
     <br>
     <ul>
-      
+      <li v-for="emp in empGroup">
+        {{emp.empName}}ได้เงินเดือน{{emp.salary}}
+      </li>
     </ul>
   
   </div>
